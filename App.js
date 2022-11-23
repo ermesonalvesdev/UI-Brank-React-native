@@ -21,7 +21,7 @@ export default class App extends Component {
       nome: '',
       idade: '',
       limite: 0,
-      genero: '',
+      genero: 'masculino',
       estudante: false,
     }
   }
@@ -90,10 +90,10 @@ export default class App extends Component {
 
           {/* Picker */}
           <View>
-            <Text style={{ fontSize: 20, padding: 5 }}>Selecione seu genero:</Text>
+            <Text style={{ fontSize: 20, padding: 5, marginBottom: 20 }}>Selecione seu genero:</Text>
             <Picker
               style={{ width: 250, height: 50, marginTop: -40, marginBottom: 160, padding: 10 }}
-              selectedValue={this.genero}
+              selectedValue={this.state.genero}
               onValueChange={(value) => this.setState({ genero : value })}>
               <Picker.Item label="masculino" value="masculino" />
               <Picker.Item label="Feminino" value="Feminino" />
