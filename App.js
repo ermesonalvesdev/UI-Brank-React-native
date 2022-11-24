@@ -54,7 +54,7 @@ export default class App extends Component {
           {/* TextInput */}
           <View>
             <Text style={{ fontSize: 20, padding: 5 }}>Digite seu nome:</Text>
-            <KeyboardAvoidingView behavior="padding">
+            <KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"}>
               <TextInput style={styles.input}
                 underlineColorAndroid="transparent"
                 placeholder="Digite seu nome"
